@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+<!--linking AOS scroll library-->
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(216, 214, 214);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    img{
+      border-radius: 50%;
+      border: 2px solid var(--orange-color);
+    }
+    h2{
+      color: var(--orange-color);
+      font-family: cursive;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .container img{
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+    .container div{
+      width: 80%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      align-items: center;
+      padding: .2rem;
+    }
+    .container span{
+      border: 1px solid var(--orange-color);
+      text-align: center;
+      font-size: 2rem;
+    }
+    /* media quiries****************************************************************************************/
+@media screen and (width>1200px) {
+  
+}
+@media screen and (width>992px) and (width<1200px) {
+  
+}
+@media screen and (width>768px) and (width<992px) {
+  
+}
+
+@media screen and (width>576px) and (width<768px) {
+  img{
+      border-radius: 50%;
+      border: 2px solid var(--orange-color);
+    }
+    .container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .container div{
+      width: 25%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      align-items: center;
+    }
+    .container span{
+      border: 1px solid var(--orange-color);
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .container img{
+      height: 2.5rem;
+    }
+    .container h2{
+      font-size: 1.1rem;
+    }
+}
+/* media Q ****** */
+@media screen and (width>388px) and (width<576px) {
+  img{
+      border-radius: 50%;
+      border: 1px solid var(--orange-color);
+    }
+    .container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .container div{
+      width: 20%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      align-items: center;
+    }
+    .container span{
+      border: 1px solid var(--orange-color);
+      text-align: center;
+      font-size: 1rem;
+    }
+    .container img{
+      height: 2rem;
+      width: 2rem;
+    }
+    .container h2{
+      font-size: .9rem;
+    }
+}
+/* media Q ****** */
+@media screen and (width<388px) {
+  img{
+      border-radius: 50%;
+      border: 1px solid var(--orange-color);
+    }
+    .container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .container div{
+      width: 10%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      align-items: center;
+    }
+    .container span{
+      border: 1px solid var(--orange-color);
+      text-align: center;
+      font-size: .6rem;
+    }
+    .container img{
+      height: 2rem;
+      width: 2rem;
+    }
+    .container h2{
+      font-size: .4rem;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="container" data-aos="zoom-in-right">
+    <div>
+      <div>
+        <img src="images/menu-item-thumbnail-05.jpg" alt="">
+        <h2>Chicken Tikka Masala</h2>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, odit.</p> -->
+        <span>$14</span>
+      </div>
+      <div>
+      <img src="images/menu-item-thumbnail-06.jpg" alt="">
+        <h2>Chicken Tikka</h2>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, odit.</p> -->
+        <span>$8.5</span>
+      </div>
+      <div>
+      <img src="images/menu-item-thumbnail-04.jpg" alt="">
+        <h2>Biryani</h2>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, odit.</p> -->
+        <span>$8.5</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+            duration: 800, // Animation duration in milliseconds
+            once: false // Whether animation should happen only once
+        });
+  </script>
+</body>
+</html>

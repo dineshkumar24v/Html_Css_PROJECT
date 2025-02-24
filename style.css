@@ -1,0 +1,2753 @@
+
+
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+/* colors*************************/
+:root{
+  --orange-color:#e75b1e;
+  /* --orange-color:#e75b1e; */
+  --blue-color: #1E69B8;
+  --yellow-color:#fdcb03;
+  --green-color:#8dc63f;
+  --white-color:#ffffff;
+  --black-color:#000000;
+  --ash-color:gray;
+}
+/* navbar*************************** */
+header{
+  background-image: url(images/banner.jpg);
+  color: var(--white-color);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+header .navbar{
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;  /*we do this to ensure navbar always stays on top*/
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  text-transform:uppercase;
+  list-style-type: none;
+}
+.nav-link {
+  /* color: #fff; */
+  /* padding: 10px 20px; */
+  /* text-decoration: none; */
+  /* transition: background-color 0.3s ease-out; */
+}
+.nav-link.active {
+  border-bottom: 3px solid var(--orange-color);
+}
+header .navbar img{
+  height: 2.5rem;
+}
+header .navbar a{
+  text-decoration: none;
+  color: var(--white-color);
+}
+header .navbar li{
+  padding-bottom: 1rem;
+}
+header .navbar li:hover{
+  border-bottom: 2px solid var(--orange-color);
+  padding-top: 1rem;
+  cursor: pointer;
+}
+/* hero section ********************************/
+header .hero_section{
+  text-align: center;
+  width: 100%;
+}
+.hero_section img{
+  height: 2rem;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+.hero_section h1{
+  font-family: "Rye", serif;
+  font-size: 5rem;
+  padding: 100px 0 0;
+  display: inline-block;
+}
+/* typing effect*********************************/
+
+#typewriter_effect {
+  display: inline-block;
+  font-size: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid var(--black-color);
+  animation: typewriter 2s steps(6) infinite alternate, blink 800ms steps(6) infinite normal;
+  color: var(--orange-color);
+  width: 100%;
+
+}
+@keyframes typewriter {
+  from {
+      width: 0%;
+  }
+
+  to {
+      width: 40%;
+  }
+}
+@keyframes blink {
+  from {
+      border-color: var(--white-color);
+  }
+
+  to {
+      border-color: transparent;
+  }
+}
+/************/
+.hero_section h3{
+  font-size: 2rem;
+  color: var(--orange-color);
+  padding: 0 0 25px; 
+}
+.hero_section p{
+  color: var(--white-color);
+  font-size: 2rem;
+  font-family: "Cookie", serif;
+  padding: 0 0 55px;
+}
+#btn{
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 1rem 1.3rem ;
+  background-color: var(--orange-color);
+  font-weight: 900;
+  cursor: pointer;
+}
+#btn:hover{
+  background-color: transparent;
+  border: 2px solid var(--orange-color); 
+}
+.hero_section button{
+  margin: 70px 423px 0;
+  width: 64px;
+  height: 124px;
+  border-radius: 40px;
+  background-color: transparent;
+  border-color: var(--orange-color);
+  color: var(--orange-color);
+  cursor: pointer;
+}
+.hero_section button:hover{
+  border-color: var(--white-color);
+  color: var(--white-color);
+
+}
+/* about us section **********************/
+#About_us{
+  margin-top: 4.1rem;
+  margin-bottom: 4.1rem;
+}
+#About_us div{
+  width: 40%;
+  margin: 2rem;
+  display: inline-block;
+}
+#About_us h1{
+  font-family: "Rye", serif;
+  color: var(--orange-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#About_us h1, h3, p {
+  padding: 0 0 10px;
+  padding: 0.5rem;
+}
+#About_us img{
+float: right;
+border-radius: 50%;
+border: 2px solid var(--orange-color);
+transition: transform 0.5s ease-in-out;
+}
+#About_us img:hover{
+  transform: scale(1.1);
+}
+/* todays special section *********/
+.todays_special{
+  background-image: url(images/special_menu_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  text-align: center;
+  height: 130vh;
+  background-size: cover;
+  background-position: center;
+  color:white;
+  overflow: hidden;
+  position: relative;
+  min-width: 100%;
+  width: 100%;
+}
+.todays_special h1{
+  font-family: "Rye", serif;
+  color: var(--orange-color);
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  font-size: 3rem;
+}
+.todays_special p{
+  font-family: "Cookie", serif;
+  color: var(--white-color);
+  font-size: 1.8rem;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.todays_special .image1_text,.image2_text,.image3_text,.image4_text{
+  display: none;
+  width: 60%;
+  border: 2px solid var(--orange-color);
+  margin: auto;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  background: rgba(0, 0, 0, 0.5); 
+}
+.image1 p{
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.5); 
+}
+.image2 p{
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.5); 
+}
+.image3 p{
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.5); 
+}
+.image4 p{
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.5); 
+}
+.imagered{
+  width: 20rem;
+  height: 27.5rem;
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+.image1:hover .image1_text, .imagered{
+ display: block;
+}
+.image2:hover .image2_text, .imagered{
+ display: block;
+}
+.image3:hover .image3_text, .imagered{
+ display: block;
+}
+.image4:hover .image4_text, .imagered{
+ display: block;
+}
+article .container{
+  display: flex;
+  justify-content: center;
+}
+
+.todays_special .image1{
+  background-image: url(images/special-menu-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  width: 20rem;
+  height: 28rem;
+  border: 1px solid var(--orange-color);
+  margin: 1rem;
+  border-radius: .5rem;
+  animation: slide 5s infinite;
+  transition-delay: 5s;
+}
+.todays_special .image2{
+  background-image: url(images/special-menu-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  width: 20rem;
+  height: 28rem;
+  border: 1px solid var(--orange-color);
+  margin: 1rem;
+  border-radius: .5rem;
+  animation: slide 5s infinite;
+  transition-delay: 5s;
+}
+.todays_special .image3{
+  background-image: url(images/special-menu-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  width: 20rem;
+  height: 28rem;
+  border: 1px solid var(--orange-color);
+  margin: 1rem;
+  border-radius: .5rem;
+  animation: slide 5s infinite;
+    transition-delay: 5s;
+}
+.todays_special .image4{
+  background-image: url(images/special-menu-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  width: 20rem;
+  height: 28rem;
+  border: 1px solid var(--orange-color);
+  margin: 1rem;
+  border-radius: .5rem;
+  animation: slide 5s infinite;
+    transition-delay: 5s;
+}
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(40%); }
+  40%{ transform: translateX(80%); }
+  60%{ transform: translateX(-20%); }
+  80%{ transform: translateX(-60%); }
+  100% { transform: translateX(0%); }
+}
+/* <!-- menu Section----------------------- --> */
+.menu_section{
+  height: 120vh;
+  text-align: center;
+  width: 100%;
+}
+.menu_section h1{
+  font-family: "Rye", serif;
+  color: var(--orange-color);
+  margin-top: 8rem;
+  font-size: 3rem;
+  padding: 4rem;
+}
+.menu_section p{
+  font-family: "Cookie", serif;
+  width: 60%;
+  margin: auto;
+  row-gap: 5rem;
+  font-size: 1.5rem;
+  padding-bottom: 6rem;
+}
+.menu_section a{
+  font-size: 1.5rem;
+  padding: 4rem;
+  /* background-color: rgb(234, 232, 232); */
+  background-color: var(--orange-color);
+  color: var(--black-color);
+  text-decoration: none;
+}
+.menu_section a:hover{
+  background-color: var(--ash-color);
+  color: var(--white-color);
+}
+iframe{
+  margin: 4rem;
+  border: none;
+  width: 78%;
+  height: 15rem;
+}
+
+/* <!-- team of chefs section---------------------------> */
+.our_team{
+  text-align: center;
+  color: var(--white-color);
+  background: linear-gradient(to right, rgba(208, 212, 209, 0.333), rgba(171, 114, 162, 0.4)), url('images/team_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 170vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+  /* url(images/team_bg.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+#team_heading{
+  padding: 4rem;
+  color: var(--orange-color);
+  font-size: 3rem;
+}
+#team_para{
+  font-family: "Clicker Script", serif;
+  font-size: 1.5rem;
+}
+.our_team h1{
+  font-family: "Rye", serif;
+  margin: 1rem;
+  font-size: 1.8rem;
+}
+.our_team p{
+  width: 60%;
+  margin: auto;
+  row-gap: 5rem;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+.chefs_container{
+  display: flex;
+  justify-content: center;
+}
+.chefs_container img{
+  width: 20.8rem;
+  border-radius: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+.chef1, .chef2, .chef3{
+  border: 1px solid black;
+  height: 100vh;
+  width: 26.2vw;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow: hidden;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+.chef1:hover,
+.chef2:hover,
+.chef3:hover{
+  background-color: var(--orange-color);
+  transition: opacity 0.5s ease;
+  opacity: 0.9;
+  cursor: pointer;
+  color: var(--white-color);
+  transform: scale(1.05);
+}
+.social_icons img{
+  margin-top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+/* <!-- gallery section ------------------------> */
+.gallery_section{
+  text-align: center;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+.gallery_section h1{
+  font-family: "Rye", serif;
+  font-size: 3rem;
+  margin: 3rem;
+  padding-top: 4rem;
+  color: var(--orange-color);
+}
+.gallery_section p{
+  font-family: "Clicker Script", serif;
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+.gallery_container{
+  display: flex;
+  height: 260vh;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  /* padding-bottom: 1rem; */
+  justify-content: center;
+}
+/* .img1, .img11{
+  height: 50vh;
+  width: 80vw;
+  padding: 2rem;
+  transition: transform 0.5s ease-in-out;
+} */
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+  height: 50vh;
+  width: 30vw;
+  padding: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+.imgC{
+  position: relative;
+  display: inline-block;
+}
+.imgC img{
+  display: block;
+}
+.imgC:hover img {
+  filter: brightness(0.7) sepia(1) hue-rotate(-20deg) saturate(3) brightness(1.2); /* Adjust color to light reddish */
+  cursor: pointer;
+  transform: scale(1.1);
+  border-radius: 2rem;
+  
+}
+.imgC::after{
+  content: '\1F50D'; /* Unicode for search icon */
+    font-size: 48px; /* Adjust size as needed */
+    color: rgba(255, 255, 255, 0.8); /* Light reddish color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.imgC:hover::after{
+  opacity:1;
+  cursor: pointer;
+}
+
+/* <!-- blog section ------------------------> */
+.blog_section{
+  background: linear-gradient(to right, rgba(154, 118, 135, 0.333), rgba(56, 52, 56, 0.4)), url('images/blog_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 160vh;
+  color: var(--white-color);
+  text-align: center;
+}
+.blog_section h1{
+  font-family: "Rye", serif;
+  padding: 5rem;
+  font-size: 3rem;
+  color: var(--orange-color);
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 3rem;
+}
+.blog_cards img{
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.blog_cards{
+  display: flex;
+  background-color: var(--white-color);
+  color: black;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+}
+.blog_cards:hover{
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+.blog_cards img:hover{
+  transform: scale(1.1);
+}
+.blog_cards div{
+  text-align: center;
+  width: 200px;
+  margin: auto;
+}
+#viewbtn{
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 1rem 1.3rem ;
+  background-color: var(--orange-color);
+  font-weight: 900;
+  cursor: pointer;
+}
+#viewbtn:hover{
+  background-color: transparent;
+  border: 2px solid var(--orange-color);
+}
+
+/* <!-- pricing section ------------------------> */
+.pricing_section{
+  text-align: center;
+  height: 150vh;
+  background-image: url(images/full-bg.png);
+}
+.pricing_section #ph1{
+  font-family: "Rye", serif;
+  padding: 5rem;
+  font-size: 3rem;
+  color: var(--orange-color);
+}
+.pricing_section p{
+  font-size: 1.5rem;
+  width: 70%;
+  margin: auto;
+}
+.cards_container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.pricing_card{
+  height: 90vh;
+  width: 20rem;
+  padding: 1rem;
+  border: 1px solid var(--orange-color);
+  margin: 1rem;
+  border-radius: 5px;
+}
+.pricing_card:hover{
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  height: 92vh;
+  width: 21rem;
+}
+#Pbtn{
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 1rem 3.8rem ;
+  background-color: var(--orange-color);
+  font-weight: 900;
+}
+#Pbtn:hover{
+  background-color: transparent;
+  border: 2px solid var(--orange-color);
+  color: var(--black-color);
+}
+
+/* <!-- reservation section ------------------------>*/
+.reservation_section{
+  text-align: center;
+  background: linear-gradient(to right, rgba(116, 89, 89, 0.3), rgba(123, 198, 219, 0.4)), url('images/tableBook.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 130vh;
+}
+.reservation_section h1{
+  font-family: "Rye", serif;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  padding-top: 3rem;
+  color: var(--orange-color);
+}
+.reservation_section h3{
+  font-family: monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.reservation_section p{
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.reservation_section input, select{
+  padding: 1rem;
+  border: none;
+  border: 2px dotted grey;
+  width: 20rem;
+  margin: 1rem;
+  background-color: rgb(236, 235, 235);
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+
+/* <!-- contact us section ------------------------> */
+.newsletter{
+  height: 65vh;
+  background: linear-gradient(to right, rgba(208, 212, 209, 0.333), rgba(171, 114, 162, 0.4)), url('images/newsletter-bg.jpg');
+  /* background-image: url(images/newsletter-bg.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/blog_bg.jpg); */
+  text-align: center;
+}
+.newsletter h1{ 
+  font-family: "Rye", serif;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  color: var(--orange-color);
+  font-size: 3rem;
+}
+.newsletter p{
+  font-family: "Clicker Script", serif;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+.newsletter input{
+  /* height: 3rem; */
+  width: 90%;
+  padding: 1rem;
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  outline: none;
+}
+.newsletter input:hover{
+  border: 2px dotted var(--orange-color) ;
+  padding: 0.9rem;
+}
+.newsletter img{
+  position: absolute;
+  padding: 0.2rem;
+  height: 2.9rem;
+  width: 3rem;
+  background-color: var(--orange-color);
+  border: 2px dotted var(--white-color) ;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+}
+.newsletter img:hover{
+  background-color: var(--black-color);
+  cursor: pointer;
+  border: 2px dotted var(--orange-color) ;
+  color: var(--black-color);
+}
+.newsletter .emailbox{
+  position: relative;
+  height: 3rem;
+  width: 60%;
+  /* border: 2px solid black; */
+  margin: auto;
+
+}
+
+/* <!-- footer---------------------> */
+.footer_section{
+  height: 80vh;
+  background-image: url(images/footer_background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  /* background-color: var(--black-color); */
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+.footer_section .div1{
+  width: 45%;
+  margin: auto; 
+}
+.containerF{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-bottom: 5rem;
+}
+
+footer{
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+.div1 a h3{
+  color: var(--orange-color);
+}
+.div1 a{
+  text-decoration: none;
+}
+
+
+
+
+/* media quiries****************************************************************************************/
+@media screen and (width>1200px) {
+  
+}
+@media screen and (width>992px) and (width<1200px) {
+    /* navbar*************************** */
+header{
+  height: 82vh;
+}
+  header .navbar{
+    height: 8vh;
+  }
+  header .navbar img{
+    height: 1.7rem;
+  }
+  header .navbar li{
+    padding-bottom: 0.5rem;
+  }
+  .navbar li{
+    font-size: 0.9rem;
+  }
+  .nav-link.active {
+    border-bottom: 2px solid var(--orange-color);
+  }
+  header .navbar li:hover{
+    border-bottom: 0.5px solid var(--orange-color);
+  }
+  .hero_section h1{
+    font-size: 2.2rem;
+    padding: 75px 0 0;
+  }
+  #typewriter_effect {
+    font-size: 23px;
+    border-right: 1px solid var(--black-color);
+  }
+  .hero_section h3{
+    font-size: 1.6rem;
+    padding: 0 0 18px;
+  }
+  .hero_section p{
+    font-size: 1.5rem;
+    padding: 0 0 28px;
+  }
+  #btn{
+    font-size: 1rem;
+    padding: 1rem 1.3rem ;
+    font-weight: 800;
+  }
+  #btn:hover{
+    border: 2px solid var(--orange-color);
+  }
+  .hero_section button{
+    width: 64px !important;
+    height: 124px !important;
+  }
+  /* about us section **********************/
+  #About_us{
+    height: 35vh;
+    margin-top: 2.3rem;
+    margin-bottom: 2.5rem;
+  }
+  #About_us div{
+    width: 60%;
+    margin: .5rem;
+  }
+  #About_us h1{
+    font-size: 2rem !;
+    margin-bottom: 1rem;
+  }
+  #About_us h1, h3, p {
+    padding: 0 0 8px;
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+  #About_us img{
+  border: 1px solid var(--orange-color);
+  }
+  #Img2{
+    height: 19rem;
+    width: 19rem;
+  }
+  #Img1{
+    height: 8rem;
+    width: 8rem;
+  }
+  /* todays special section *********/
+  .todays_special{
+    height: 75vh;
+  }
+  .todays_special h1{
+    margin-bottom: 1.6rem;
+    padding-top: 1.6rem;
+    font-size: 1.9rem;
+  }
+  .todays_special p{
+    font-size: 1.4rem;
+    width: 70%;
+    padding-bottom: 1.2rem;
+  }
+  .todays_special .image1_text,.image2_text,.image3_text, .image4_text{
+    display: none !important;
+  }
+  .todays_special .image1{
+    width: 17rem;
+    height: 21rem;
+    margin: .6rem;
+    border-radius: .4rem;
+  }
+  .todays_special .image2{
+    width: 17rem;
+    height: 21rem;
+    margin: .6rem;
+    border-radius: .4rem;
+  }
+  .todays_special .image3{
+    width: 17rem;
+    height: 21rem;
+    margin: .6rem;
+    border-radius: .4rem;
+  }
+  .todays_special .image4{
+    width: 17rem;
+    height: 21rem;
+    margin: .6rem;
+    border-radius: .4rem;
+  }
+
+  /* <!-- menu Section-------------------------> */
+  .menu_section{
+    height: 60vh;
+  }
+  .menu_section h1{
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    padding: 1.8rem;
+  }
+  .menu_section p{
+    width: 70%;
+    row-gap: 5rem;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+  }
+  .menu_section a{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  iframe{
+  margin: .8rem;
+  border: none;
+  width: 90%;
+  height: 10rem;
+}
+
+  /* <!-- team of chefs section---------------------------> */
+  .our_team{
+    height: 80vh;
+  }
+  #team_heading{
+    padding: 2.1rem;
+    font-size: 2.1rem;
+  }
+  #team_para{
+    font-size: 1.6rem;
+  }
+  .our_team h1{
+    margin: .9rem;
+    font-size: 1.2rem;
+  }
+  .our_team p{
+    width: 80%;
+    row-gap: .5rem;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+  }
+  .chefs_container img{
+    width: 8rem;
+    border-radius: .2rem;
+  }
+  .chef1, .chef2, .chef3{
+    height: 35vh;
+    width: 26vw;
+    margin: .7rem;
+    border-radius: .2rem;
+  }
+  .social_icons img{
+    margin-top: .7rem;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  /* <!-- gallery section ------------------------> */
+  .gallery_section{
+    padding-bottom: 1rem;
+  }
+  .gallery_section h1{
+    font-size: 2.1rem;
+    margin: 1.1rem;
+    padding-top: 2rem;
+  }
+  .gallery_section p{
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+  }
+  .gallery_container{
+    height: 210vh;
+    gap: 0.2rem;
+  }
+  .container div{
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+    height: 34vh;
+    width: 46vw;
+    padding: 2rem;
+  }
+  .imgC:hover img {
+    border-radius: 2rem;
+  }
+  /* <!-- blog section ------------------------> */
+.blog_section{
+  height: 75vh;
+  display: grid;
+  justify-content: center;
+}
+.blog_section h1{
+  padding: 1rem;
+  font-size: 2rem;
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1.5rem;
+}
+.blog_cards img{
+  height: 6rem;
+}
+.blog_cards{
+  margin: auto;
+  align-items: center;
+  margin: .7rem;
+  border-radius: 1rem;
+  width: 16rem;
+}
+.blog_cards div{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.blog_cards h2{
+  font-size: .6rem;
+}
+.blog_cards p{
+  font-size: .4rem;
+}
+#viewbtn{
+  font-size: 1rem;
+  padding: .5rem .4rem ;
+  font-weight: 700;
+  width: 13rem;
+  height: 2.4rem;
+  margin: auto;
+}
+
+/* <!-- pricing section ------------------------> */
+  .pricing_section{
+    height: 80vh;
+  }
+  .pricing_section #ph1{
+    padding: 2.1rem;
+    font-size: 1.5rem;
+  }
+  .pricing_section p{
+    font-size: 1rem;
+    width: 80%;
+  }
+  .pricing_card{
+    height: 55vh;
+    width: 10rem;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: 5px;
+  }
+  .pricing_card h3{
+    font-size: .6rem;
+  }
+  .pricing_card h1{
+    font-size: .7rem;
+  }
+  .pricing_card p{
+    font-size: .8rem;
+  }
+  .pricing_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    height: 56vh;
+    width: 11rem;
+  }
+  #Pbtn{
+    font-size: .4rem;
+    padding: .4rem 0.9rem;
+    font-weight: 600;
+  }
+  #Pbtn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  /* <!-- reservation section ------------------------> */
+  .reservation_section{
+  height: 100vh;
+  }
+  .reservation_section h1{
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.7rem;
+  }
+  .reservation_section h3{
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section p{
+  font-size: 01rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section input, select{
+  padding: .5rem;
+  border: 2px dotted grey;
+  width: 12rem;
+  margin: .6rem;
+  border-radius: 0.2rem;
+  margin-bottom: .5rem;
+  }
+
+/* <!-- contact us section ------------------------> */
+  .newsletter{
+    height: 39vh;
+  }
+  .newsletter h1{ 
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .newsletter p{
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+  }
+  .newsletter input{
+    width: 100%;
+    padding: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .newsletter input:hover{
+    border: 1px dotted var(--orange-color) ;
+    padding: 0.5rem;
+  }
+  .newsletter img{
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.7rem;
+  }
+  .newsletter img:hover{
+    border: 1px dotted var(--orange-color) ;
+  }
+  .newsletter .emailbox{
+    height: 1rem;
+    width: 50%;
+  }
+  /* <!-- footer---------------------> */
+  .footer_section{
+    height: 54vh;
+  }
+  .logo{
+    padding: 2.3rem;
+    height: 7rem;
+  }
+  .footer_section .div1{
+    width: 60%;
+  }
+  .containerF{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1rem;
+  }
+  footer{
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  footer img{
+    height: 1.5rem;
+  }
+
+}
+@media screen and (width>768px) and (width<992px) {
+  /* navbar*************************** */
+header{
+  height: 60vh;
+}
+  header .navbar{
+    height: 6vh;
+  }
+  header .navbar img{
+    height: 1.5rem;
+  }
+  header .navbar li{
+    padding-bottom: 0.5rem;
+  }
+  .navbar li{
+    font-size: 0.7rem;
+  }
+  .nav-link.active {
+    border-bottom: 2px solid var(--orange-color);
+  }
+  header .navbar li:hover{
+    border-bottom: 0.5px solid var(--orange-color);
+  }
+  .hero_section h1{
+    font-size: 1.7rem;
+    padding: 75px 0 0;
+  }
+  #typewriter_effect {
+    font-size: 18px;
+    border-right: 1px solid var(--black-color);
+  }
+  .hero_section h3{
+    font-size: 1.2rem;
+    padding: 0 0 14px;
+  }
+  .hero_section p{
+    font-size: 1.1rem;
+    padding: 0 0 23px;
+  }
+  #btn{
+    font-size: 0.7rem;
+    padding: .6rem .9rem ;
+    font-weight: 800;
+  }
+  #btn:hover{
+    border: 2px solid var(--orange-color);
+  }
+  .hero_section button{
+    margin: 11px 24px 0;
+    width: 26px;
+    height: 56px;
+    border-radius: 40px;
+  }
+  /* about us section **********************/
+  #about_us{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #about_us div{
+    width: 50%;
+    margin: .5rem;
+  }
+  #about_us h1{
+    font-size: 6rem;
+    margin-bottom: .5rem;
+  }
+  #about_us h1, h3, p {
+    padding: 0 0 1px;
+    padding: 0.2rem;
+    font-size: .8rem;
+  }
+  #about_us img{
+  border: 1px solid var(--orange-color);
+  }
+  #Img2{
+    height: 14rem;
+    width: 14rem;
+  }
+  #Img1{
+    height: 5rem;
+    width: 5rem;
+  }
+  /* todays special section *********/
+  .todays_special{
+    height: 85vh;
+  }
+  .todays_special h1{
+    margin-bottom: 1.6rem;
+    padding-top: 1.6rem;
+    font-size: 1.9rem;
+  }
+  .todays_special p{
+    font-size: 1.4rem;
+    width: 70%;
+    padding-bottom: 1.2rem;
+  }
+  .todays_special .image1_text,.image2_text,.image3_text, .image4_text{
+    display: none !important;
+  }
+  .todays_special .image1{
+    width: 15rem;
+    height: 18rem;
+    margin: .5rem;
+    border-radius: .3rem;
+  }
+  .todays_special .image2{
+    width: 15rem;
+    height: 18rem;
+    margin: .5rem;
+    border-radius: .3rem;
+  }
+  .todays_special .image3{
+    width: 15rem;
+    height: 18rem;
+    margin: .5rem;
+    border-radius: .3rem;
+  }
+  .todays_special .image4{
+    width: 15rem;
+    height: 18rem;
+    margin: .5rem;
+    border-radius: .3rem;
+  }
+  /* <!-- menu Section-------------------------> */
+  .menu_section{
+    height: 75vh;
+  }
+  .menu_section h1{
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    padding: 1.8rem;
+  }
+  .menu_section p{
+    width: 70%;
+    row-gap: 5rem;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+  }
+  .menu_section a{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  iframe{
+  margin: .8rem;
+  border: none;
+  width: 90%;
+  height: 10rem;
+}
+
+  /* <!-- team of chefs section---------------------------> */
+  .our_team{
+    height: 80vh;
+  }
+  #team_heading{
+    padding: 2.1rem;
+    font-size: 2.1rem;
+  }
+  #team_para{
+    font-size: 1.2rem;
+  }
+  .our_team h1{
+    margin: .6rem;
+    font-size: .7rem;
+  }
+  .our_team p{
+    width: 80%;
+    row-gap: .5rem;
+    font-size: .5rem;
+    padding-bottom: .8rem;
+  }
+  .chefs_container img{
+    width: 5.8rem;
+    border-radius: .2rem;
+  }
+  .chef1, .chef2, .chef3{
+    border: 1px solid black;
+    height: 36vh;
+    width: 25.5vw;
+    margin: .7rem;
+    border-radius: .2rem;
+  }
+  .social_icons img{
+    margin-top: .5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+  }
+  /* <!-- gallery section ------------------------> */
+  .gallery_section{
+    padding-bottom: 1rem;
+  }
+  .gallery_section h1{
+    font-size: 2.1rem;
+    margin: 1.1rem;
+    padding-top: 2rem;
+  }
+  .gallery_section p{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  .gallery_container{
+    height: 210vh;
+    gap: 0.2rem;
+  }
+  .container div{
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+    height: 34vh;
+    width: 46vw;
+    padding: 2rem;
+  }
+  .imgC:hover img {
+    border-radius: 2rem;
+  }
+  /* <!-- blog section ------------------------> */
+.blog_section{
+  height: 95vh;
+  display: grid;
+  justify-content: center;
+}
+.blog_section h1{
+  padding: 1.5rem;
+  font-size: 1.7rem;
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1.5rem;
+}
+.blog_cards img{
+  height: 5.8rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+.blog_cards{
+  margin: auto;
+  align-items: center;
+  margin: .7rem;
+  border-radius: 1rem;
+  width: 16rem;
+}
+.blog_cards div{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.blog_cards h2{
+  font-size: .6rem;
+}
+.blog_cards p{
+  font-size: .4rem;
+}
+#viewbtn{
+  font-size: 1rem;
+  padding: .5rem .4rem ;
+  font-weight: 700;
+  width: 13rem;
+  height: 2.4rem;
+  margin: auto;
+}
+
+/* <!-- pricing section ------------------------> */
+  .pricing_section{
+    height: 80vh;
+  }
+  .pricing_section #ph1{
+    padding: 2.1rem;
+    font-size: 1.5rem;
+  }
+  .pricing_section p{
+    font-size: 1rem;
+    width: 80%;
+  }
+  .pricing_card{
+    height: 55vh;
+    width: 10rem;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: 5px;
+  }
+  .pricing_card h3{
+    font-size: .6rem;
+  }
+  .pricing_card h1{
+    font-size: .7rem;
+  }
+  .pricing_card p{
+    font-size: .8rem;
+  }
+  .pricing_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    height: 56vh;
+    width: 11rem;
+  }
+  #Pbtn{
+    font-size: .4rem;
+    padding: .4rem 0.9rem;
+    font-weight: 600;
+  }
+  #Pbtn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  /* <!-- reservation section ------------------------> */
+  .reservation_section{
+  height: 100vh;
+  }
+  .reservation_section h1{
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.7rem;
+  }
+  .reservation_section h3{
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section p{
+  font-size: 01rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section input, select{
+  padding: .5rem;
+  border: 2px dotted grey;
+  width: 12rem;
+  margin: .6rem;
+  border-radius: 0.2rem;
+  margin-bottom: .5rem;
+  }
+
+/* <!-- contact us section ------------------------> */
+  .newsletter{
+    height: 39vh;
+  }
+  .newsletter h1{ 
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .newsletter p{
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+  }
+  .newsletter input{
+    width: 100%;
+    padding: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .newsletter input:hover{
+    border: 1px dotted var(--orange-color) ;
+    padding: 0.5rem;
+  }
+  .newsletter img{
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.7rem;
+  }
+  .newsletter img:hover{
+    border: 1px dotted var(--orange-color) ;
+  }
+  .newsletter .emailbox{
+    height: 1rem;
+    width: 50%;
+  }
+  /* <!-- footer---------------------> */
+  .footer_section{
+    height: 54vh;
+  }
+  .logo{
+    padding: 2.3rem;
+    height: 7rem;
+  }
+  .footer_section .div1{
+    width: 60%;
+  }
+  .containerF{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1rem;
+  }
+  footer{
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  footer img{
+    height: 1.5rem;
+  }
+}
+
+@media screen and (width>576px) and (width<768px) {
+  /* navbar*************************** */
+header{
+  height: 60vh;
+}
+  header .navbar{
+    height: 6vh;
+  }
+  header .navbar img{
+    height: 1.5rem;
+  }
+  header .navbar li{
+    padding-bottom: 0.5rem;
+  }
+  .navbar li{
+    font-size: 0.6rem;
+  }
+  .nav-link.active {
+    border-bottom: 1px solid var(--orange-color);
+  }
+  header .navbar li:hover{
+    border-bottom: 0.5px solid var(--orange-color);
+  }
+  .hero_section h1{
+    font-size: 1.7rem;
+    padding: 75px 0 0;
+  }
+  #typewriter_effect {
+    font-size: 18px;
+    border-right: 1px solid var(--black-color);
+  }
+  .hero_section h3{
+    font-size: 1.2rem;
+    padding: 0 0 14px;
+  }
+  .hero_section p{
+    font-size: 1.1rem;
+    padding: 0 0 23px;
+  }
+  #btn{
+    font-size: 0.7rem;
+    padding: .6rem .9rem ;
+    font-weight: 800;
+  }
+  #btn:hover{
+    border: 2px solid var(--orange-color);
+  }
+  .hero_section button{
+    margin: 11px 24px 0;
+    width: 26px;
+    height: 56px;
+    border-radius: 40px;
+  }
+  /* about us section **********************/
+  #About_us{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #About_us div{
+    width: 50%;
+    margin: .5rem;
+  }
+  #About_us h1{
+    font-size: 1.7rem !important;
+    margin-bottom: .5rem;
+  }
+  #About_us h1, h3, p {
+    padding: 0 0 1px;
+    padding: 0.2rem;
+    font-size: .8rem;
+  }
+  #About_us img{
+  border: 1px solid var(--orange-color);
+  }
+  #Img2{
+    height: 10rem;
+    width: 10rem;
+  }
+  #Img1{
+    height: 5rem;
+    width: 5rem;
+  }
+  /* todays special section *********/
+  .todays_special{
+    height: 80vh;
+  }
+  .todays_special h1{
+    margin-bottom: 1.2rem;
+    padding-top: 1.3rem;
+    font-size: 1.6rem;
+  }
+  .todays_special p{
+    font-size: 1.2rem;
+    width: 70%;
+    padding-bottom: 1.2rem;
+  }
+  .todays_special .image1_text,.image2_text,.image3_text, .image4_text{
+    display: none !important;
+  }
+  .todays_special .image1{
+    width: 14rem;
+    height: 16rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image2{
+    width: 14rem;
+    height: 16rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image3{
+    width: 14rem;
+    height: 16rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image4{
+    width: 14rem;
+    height: 16rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  /* <!-- menu Section-------------------------> */
+  .menu_section{
+    height: 75vh;
+  }
+  .menu_section h1{
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    padding: 1.8rem;
+  }
+  .menu_section p{
+    width: 70%;
+    row-gap: 5rem;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+  }
+  .menu_section a{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  iframe{
+  margin: .8rem;
+  border: none;
+  width: 90%;
+  height: 10rem;
+}
+
+  /* <!-- team of chefs section---------------------------> */
+  .our_team{
+    height: 80vh;
+  }
+  #team_heading{
+    padding: 2.1rem;
+    font-size: 2.1rem;
+  }
+  #team_para{
+    font-size: 1.2rem;
+  }
+  .our_team h1{
+    margin: .6rem;
+    font-size: .7rem;
+  }
+  .our_team p{
+    width: 80%;
+    row-gap: .5rem;
+    font-size: .5rem;
+    padding-bottom: .8rem;
+  }
+  .chefs_container img{
+    width: 5.8rem;
+    border-radius: .2rem;
+  }
+  .chef1, .chef2, .chef3{
+    border: 1px solid black;
+    height: 36vh;
+    width: 25.5vw;
+    margin: .7rem;
+    border-radius: .2rem;
+  }
+  .social_icons img{
+    margin-top: .5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+  }
+  /* <!-- gallery section ------------------------> */
+  .gallery_section{
+    padding-bottom: 1rem;
+  }
+  .gallery_section h1{
+    font-size: 2.1rem;
+    margin: 1.1rem;
+    padding-top: 2rem;
+  }
+  .gallery_section p{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  .gallery_container{
+    height: 210vh;
+    gap: 0.2rem;
+  }
+  .container div{
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+    height: 34vh;
+    width: 46vw;
+    padding: 2rem;
+  }
+  .imgC:hover img {
+    border-radius: 2rem;
+  }
+  /* <!-- blog section ------------------------> */
+.blog_section{
+  height: 95vh;
+  display: grid;
+  justify-content: center;
+}
+.blog_section h1{
+  padding: 1.5rem;
+  font-size: 1.7rem;
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1.5rem;
+}
+.blog_cards img{
+  height: 5.8rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+.blog_cards{
+  margin: auto;
+  align-items: center;
+  margin: .7rem;
+  border-radius: 1rem;
+  width: 16rem;
+}
+.blog_cards div{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.blog_cards h2{
+  font-size: .6rem;
+}
+.blog_cards p{
+  font-size: .4rem;
+}
+#viewbtn{
+  font-size: 1rem;
+  padding: .6rem .4rem ;
+  font-weight: 700;
+  width: 12rem;
+  height: 2.5rem;
+  margin: auto;
+}
+
+/* <!-- pricing section ------------------------> */
+  .pricing_section{
+    height: 80vh;
+  }
+  .pricing_section #ph1{
+    padding: 2.1rem;
+    font-size: 1.5rem;
+  }
+  .pricing_section p{
+    font-size: 1rem;
+    width: 80%;
+  }
+  .pricing_card{
+    height: 55vh;
+    width: 10rem;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: 5px;
+  }
+  .pricing_card h3{
+    font-size: .6rem;
+  }
+  .pricing_card h1{
+    font-size: .7rem;
+  }
+  .pricing_card p{
+    font-size: .8rem;
+  }
+  .pricing_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    height: 56vh;
+    width: 11rem;
+  }
+  #Pbtn{
+    font-size: .4rem;
+    padding: .4rem 0.9rem;
+    font-weight: 600;
+  }
+  #Pbtn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  /* <!-- reservation section ------------------------> */
+  .reservation_section{
+  height: 100vh;
+  }
+  .reservation_section h1{
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.7rem;
+  }
+  .reservation_section h3{
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section p{
+  font-size: 01rem;
+  margin-bottom: .7rem;
+  }
+  .reservation_section input, select{
+  padding: .5rem;
+  border: 2px dotted grey;
+  width: 12rem;
+  margin: .6rem;
+  border-radius: 0.2rem;
+  margin-bottom: .5rem;
+  }
+
+/* <!-- contact us section ------------------------> */
+  .newsletter{
+    height: 39vh;
+  }
+  .newsletter h1{ 
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .newsletter p{
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+  }
+  .newsletter input{
+    width: 100%;
+    padding: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .newsletter input:hover{
+    border: 1px dotted var(--orange-color) ;
+    padding: 0.5rem;
+  }
+  .newsletter img{
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.7rem;
+  }
+  .newsletter img:hover{
+    border: 1px dotted var(--orange-color) ;
+  }
+  .newsletter .emailbox{
+    height: 1rem;
+    width: 50%;
+  }
+  /* <!-- footer---------------------> */
+  .footer_section{
+    height: 54vh;
+  }
+  .logo{
+    padding: 2.3rem;
+    height: 7rem;
+  }
+  .footer_section .div1{
+    width: 60%;
+  }
+  .containerF{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1rem;
+  }
+  footer{
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  footer img{
+    height: 1.5rem;
+  }
+}
+/* media Q ****** */
+@media screen and (width>388px) and (width<576px) {
+/* navbar*************************** */
+header{
+  height: 50vh;
+}
+  header .navbar{
+    height: 5vh;
+  }
+  header .navbar img{
+    height: 1.2rem;
+  }
+  header .navbar li{
+    padding-bottom: 0.4rem;
+  }
+  .navbar li{
+    font-size: 0.4rem;
+  }
+  .nav-link.active {
+    border-bottom: 1px solid var(--orange-color);
+  }
+  header .navbar li:hover{
+    border-bottom: 0.5px solid var(--orange-color);
+  }
+  .hero_section h1{
+    font-size: 1.4rem;
+    padding: 65px 0 0;
+  }
+  #typewriter_effect {
+    font-size: 16px;
+    border-right: 1px solid var(--black-color);
+  }
+  .hero_section h3{
+    font-size: 1.1rem;
+    padding: 0 0 14px;
+  }
+  .hero_section p{
+    font-size: 1rem;
+    padding: 0 0 21px;
+  }
+  #btn{
+    font-size: 0.6rem;
+    padding: .5rem .8rem ;
+    font-weight: 700;
+  }
+  #btn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  .hero_section button{
+    margin: 10px 23px 0;
+    width: 24px;
+    height: 54px;
+    border-radius: 40px;
+  }
+  /* about us section **********************/
+  #About_us{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #About_us div{
+    width: 50%;
+    margin: .5rem;
+  }
+  #About_us h1{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
+  #About_us h3, p {
+    padding: 0 0 1px;
+    padding: 0.1rem;
+    font-size: .6rem;
+  }
+  #About_us img{
+  border: 1px solid var(--orange-color);
+  }
+  #Img2{
+    height: 7rem;
+    width: 7rem;
+  }
+  #Img1{
+    height: 3rem;
+    width: 3rem;
+  }
+  /* todays special section *********/
+  .todays_special{
+    height: 70vh;
+  }
+  .todays_special h1{
+    margin-bottom: 1.2rem;
+    padding-top: 1rem;
+    font-size: 1.7rem;
+  }
+  .todays_special p{
+    font-size: 1rem;
+    width: 80%;
+    padding-bottom: 1rem;
+  }
+  .todays_special .image1_text,.image2_text,.image3_text, .image4_text{
+    display: none !important;
+  }
+  .todays_special .image1{
+    width: 12rem;
+    height: 14rem;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image2{
+    width: 12rem;
+    height: 14rem;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image3{
+    width: 12rem;
+    height: 14rem;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image4{
+    width: 12rem;
+    height: 14rem;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  /* <!-- menu Section-------------------------> */
+  .menu_section{
+    height: 70vh;
+  }
+  .menu_section h1{
+    margin-top: 1.1rem;
+    font-size: 1.5rem;
+    padding: 1.4rem;
+  }
+  .menu_section p{
+    width: 60%;
+    row-gap: 5rem;
+    font-size: .9rem;
+    padding-bottom: 2rem;
+  }
+  .menu_section a{
+    font-size: .9rem;
+    padding: .8rem;
+  }
+  iframe{
+  margin: .8rem;
+  border: none;
+  width: 90%;
+  height: 10rem;
+}
+
+  /* <!-- team of chefs section---------------------------> */
+  .our_team{
+    height: 75vh;
+  }
+  #team_heading{
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  #team_para{
+    font-size: 1rem;
+  }
+  .our_team h1{
+    margin: .4rem;
+    font-size: .5rem;
+  }
+  .our_team p{
+    width: 90%;
+    row-gap: .5rem;
+    font-size: .4rem;
+    padding-bottom: .6rem;
+  }
+  .chefs_container img{
+    width: 5.5rem;
+    border-radius: .2rem;
+  }
+  .chef1, .chef2, .chef3{
+    border: 1px solid black;
+    height: 32vh;
+    width: 25.2vw;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .social_icons img{
+    margin-top: .5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+  }
+  /* <!-- gallery section ------------------------> */
+  .gallery_section{
+    padding-bottom: 1rem;
+  }
+  .gallery_section h1{
+    font-size: 2rem;
+    margin: 1rem;
+    padding-top: 2rem;
+  }
+  .gallery_section p{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  .gallery_container{
+    height: 190vh;
+    gap: 0.2rem;
+  }
+  .container div{
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+    height: 30vh;
+    width: 45vw;
+    padding: 2rem;
+  }
+  .imgC:hover img {
+    border-radius: 2rem;
+  }
+  /* <!-- blog section ------------------------> */
+.blog_section{
+  height: 99vh;
+  display: grid;
+  justify-content: center;
+}
+.blog_section h1{
+  padding: 1.3rem;
+  font-size: 1.3rem;
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 1rem;
+}
+.blog_cards img{
+  height: 5.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.blog_cards{
+  margin: auto;
+  align-items: center;
+  margin: .5rem;
+  border-radius: 1rem;
+  width: 13rem;
+}
+.blog_cards div{
+  width: 3rem;
+  height: 2rem;
+}
+.blog_cards h2{
+  font-size: .5rem;
+}
+.blog_cards p{
+  font-size: .3rem;
+}
+#viewbtn{
+  font-size: .9rem;
+  padding: .6rem .4rem ;
+  font-weight: 700;
+  width: 10rem;
+  height: 2.3rem;
+  margin: auto;
+}
+
+/* <!-- pricing section ------------------------> */
+  .pricing_section{
+    height: 70vh;
+  }
+  .pricing_section #ph1{
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
+  .pricing_section p{
+    font-size: .8rem;
+    width: 90%;
+  }
+  .pricing_card{
+    height: 44vh;
+    width: 10rem;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: 5px;
+  }
+  .pricing_card h3{
+    font-size: .5rem;
+  }
+  .pricing_card h1{
+    font-size: .6rem;
+  }
+  .pricing_card p{
+    font-size: .6rem;
+  }
+  .pricing_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    height: 45vh;
+    width: 11rem;
+  }
+  #Pbtn{
+    font-size: .4rem;
+    padding: .4rem 0.9rem;
+    font-weight: 600;
+  }
+  #Pbtn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  /* <!-- reservation section ------------------------> */
+  .reservation_section{
+  height: 100vh;
+  }
+  .reservation_section h1{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  }
+  .reservation_section h3{
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  }
+  .reservation_section p{
+  font-size: 0.7rem;
+  margin-bottom: .5rem;
+  }
+  .reservation_section input, select{
+  padding: .4rem;
+  border: 2px dotted grey;
+  width: 12rem;
+  margin: .6rem;
+  border-radius: 0.2rem;
+  margin-bottom: .5rem;
+  }
+
+/* <!-- contact us section ------------------------> */
+  .newsletter{
+    height: 39vh;
+  }
+  .newsletter h1{ 
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .newsletter p{
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+  }
+  .newsletter input{
+    width: 100%;
+    padding: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .newsletter input:hover{
+    border: 1px dotted var(--orange-color) ;
+    padding: 0.5rem;
+  }
+  .newsletter img{
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.7rem;
+  }
+  .newsletter img:hover{
+    border: 1px dotted var(--orange-color) ;
+  }
+  .newsletter .emailbox{
+    height: 1rem;
+    width: 50%;
+  }
+  /* <!-- footer---------------------> */
+  .footer_section{
+    height: 50vh;
+  }
+  .logo{
+    padding: 2.3rem;
+    height: 7rem;
+  }
+  .footer_section .div1{
+    width: 55%;
+  }
+  .containerF{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1rem;
+  }
+  footer{
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  footer img{
+    height: 1.5rem;
+  }
+}
+/* media Q ****** */
+@media screen and (width<388px) {
+/* navbar*************************** */
+header{
+  height: 50vh;
+}
+  header .navbar{
+    height: 4vh;
+  }
+  header .navbar img{
+    height: .8rem;
+  }
+  header .navbar li{
+    padding-bottom: 0.1rem;
+  }
+  .navbar li{
+    font-size: 0.3rem;
+  }
+  .nav-link.active {
+    border-bottom: 1px solid var(--orange-color);
+  }
+  header .navbar li:hover{
+    border-bottom: 0.5px solid var(--orange-color);
+  }
+  .hero_section h1{
+    font-size: 1.2rem;
+    padding: 60px 0 0;
+  }
+  #typewriter_effect {
+    font-size: 15px;
+    border-right: 1px solid var(--black-color);
+  }
+  .hero_section h3{
+    font-size: 1rem;
+    padding: 0 0 12px;
+  }
+  .hero_section p{
+    font-size: 0.9rem;
+    padding: 0 0 20px;
+  }
+  #btn{
+    font-size: 0.6rem;
+    padding: .4rem .7rem ;
+    font-weight: 700;
+  }
+  #btn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  .hero_section button{
+    margin: 10px 23px 0;
+    width: 24px;
+    height: 54px;
+    border-radius: 40px;
+  }
+  /* about us section **********************/
+  #About_us{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #About_us div{
+    width: 50%;
+    margin: .5rem;
+  }
+  #About_us h1{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  #About_us h3, p {
+    padding: 0 0 1px;
+    padding: 0.1rem;
+    font-size: .5rem;
+  }
+  #About_us img{
+  border: 1px solid var(--orange-color);
+  }
+  #Img2{
+    height: 4rem;
+    width: 4rem;
+  }
+  #Img1{
+    height: 2rem;
+    width: 2rem;
+  }
+  /* todays special section *********/
+  .todays_special{
+    height: 60vh;
+  }
+  .todays_special h1{
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .todays_special p{
+    font-size: .8rem;
+    width: 80%;
+    padding-bottom: 1rem;
+  }
+  .todays_special .image1_text,.image2_text,.image3_text, .image4_text{
+    display: none !important;
+  }
+  .todays_special .image1{
+    width: 15rem;
+    height: 10rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image2{
+    width: 15rem;
+    height: 10rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image3{
+    width: 15rem;
+    height: 10rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  .todays_special .image4{
+    width: 15rem;
+    height: 10rem;
+    margin: .4rem;
+    border-radius: .2rem;
+  }
+  /* <!-- menu Section-------------------------> */
+  .menu_section{
+    height: 70vh;
+  }
+  .menu_section h1{
+    margin-top: 1.1rem;
+    font-size: 1.5rem;
+    padding: 1.4rem;
+  }
+  .menu_section p{
+    width: 70%;
+    row-gap: 5rem;
+    font-size: .9rem;
+    padding-bottom: 2rem;
+  }
+  .menu_section a{
+    font-size: .5rem;
+    padding: .3rem;
+  }
+  iframe{
+  margin: .5rem;
+  border: none;
+  width: 93%;
+  height: 8rem;
+}
+
+  /* <!-- team of chefs section---------------------------> */
+  .our_team{
+    height: 75vh;
+  }
+  #team_heading{
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  #team_para{
+    font-size: 1rem;
+  }
+  .our_team h1{
+    margin: .4rem;
+    font-size: .5rem;
+  }
+  .our_team p{
+    width: 90%;
+    row-gap: .5rem;
+    font-size: .3rem;
+    padding-bottom: .5rem;
+  }
+  .chefs_container img{
+    width: 5.2rem;
+    border-radius: .2rem;
+  }
+  .chef1, .chef2, .chef3{
+    border: 1px solid black;
+    height: 32vh;
+    width: 25.2vw;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .social_icons img{
+    margin-top: .5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+  }
+  /* <!-- gallery section ------------------------> */
+  .gallery_section{
+    padding-bottom: 1rem;
+  }
+  .gallery_section h1{
+    font-size: 2rem;
+    margin: 1rem;
+    padding-top: 2rem;
+  }
+  .gallery_section p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+  .gallery_container{
+    height: 180vh;
+    gap: 0.2rem;
+  }
+  .container div{
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+    height: 30vh;
+    width: 45vw;
+    padding: 2rem;
+  }
+  .imgC:hover img {
+    border-radius: 2rem;
+  }
+  /* <!-- blog section ------------------------> */
+.blog_section{
+  height: 90vh;
+  display: grid;
+  justify-content: center;
+}
+.blog_section h1{
+  padding: 1rem;
+  font-size: 1rem;
+}
+.blogC_container{
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 1rem;
+}
+.blog_cards img{
+  height: 5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.blog_cards{
+  margin: auto;
+  align-items: center;
+  margin: .5rem;
+  border-radius: 1rem;
+  width: 13rem;
+}
+.blog_cards div{
+  width: 3rem;
+  height: 2rem;
+}
+.blog_cards h2{
+  font-size: .5rem;
+}
+.blog_cards p{
+  font-size: .3rem;
+}
+#viewbtn{
+  font-size: .7rem;
+  padding: .6rem .4rem ;
+  font-weight: 700;
+  width: 7rem;
+  height: 2rem;
+  margin: auto;
+}
+
+/* <!-- pricing section ------------------------> */
+  .pricing_section{
+    height: 70vh;
+  }
+  .pricing_section #ph1{
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .pricing_section p{
+    font-size: .7rem;
+    width: 90%;
+  }
+  .pricing_card{
+    height: 42vh;
+    width: 10rem;
+    padding: .2rem;
+    margin: .2rem;
+    border-radius: 5px;
+  }
+  .pricing_card h3{
+    font-size: .4rem;
+  }
+  .pricing_card h1{
+    font-size: .5rem;
+  }
+  .pricing_card p{
+    font-size: .4rem;
+  }
+  .pricing_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    height: 42vh;
+    width: 11rem;
+  }
+  #Pbtn{
+    font-size: .4rem;
+    padding: .2rem 0.5rem;
+    font-weight: 600;
+  }
+  #Pbtn:hover{
+    border: 1px solid var(--orange-color);
+  }
+  /* <!-- reservation section ------------------------> */
+  .reservation_section{
+  height: 105vh;
+  }
+  .reservation_section h1{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  }
+  .reservation_section h3{
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  }
+  .reservation_section p{
+  font-size: 0.7rem;
+  margin-bottom: .5rem;
+  }
+  .reservation_section input, select{
+  padding: .4rem;
+  border: 2px dotted grey;
+  width: 12rem;
+  margin: .6rem;
+  border-radius: 0.2rem;
+  margin-bottom: .5rem;
+  }
+
+/* <!-- contact us section ------------------------> */
+  .newsletter{
+    height: 42vh;
+  }
+  .newsletter h1{ 
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .newsletter p{
+    font-size: 1rem;
+    padding-bottom: 3rem;
+  }
+  .newsletter input{
+    width: 100%;
+    padding: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .newsletter input:hover{
+    border: 1px dotted var(--orange-color) ;
+    padding: 0.5rem;
+  }
+  .newsletter img{
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.7rem;
+  }
+  .newsletter img:hover{
+    border: 1px dotted var(--orange-color) ;
+  }
+  .newsletter .emailbox{
+    height: 1rem;
+    width: 50%;
+  }
+  /* <!-- footer---------------------> */
+  .footer_section{
+    height: 65vh;
+  }
+  .logo{
+    padding: 2rem;
+    height: 7rem;
+  }
+  .footer_section .div1{
+    width: 55%;
+  }
+  .containerF{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 1rem;
+  }
+  footer{
+    height: 3rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  footer img{
+    height: 1.4rem;
+  }
+  footer p{
+    font-size: .8rem;
+  }
+  
+}
