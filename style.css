@@ -794,6 +794,10 @@ footer{
 }
 @media screen and (width>992px) and (width<1200px) {
     /* navbar*************************** */
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 header{
   height: 82vh;
 }
@@ -1182,6 +1186,10 @@ header{
 }
 @media screen and (width>768px) and (width<992px) {
   /* navbar*************************** */
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 header{
   height: 60vh;
 }
@@ -1574,6 +1582,10 @@ header{
 
 @media screen and (width>576px) and (width<768px) {
   /* navbar*************************** */
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 header{
   height: 60vh;
 }
@@ -1966,6 +1978,10 @@ header{
 /* media Q ****** */
 @media screen and (width>388px) and (width<576px) {
 /* navbar*************************** */
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 header{
   height: 50vh;
 }
@@ -2358,6 +2374,10 @@ header{
 /* media Q ****** */
 @media screen and (width<388px) {
 /* navbar*************************** */
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 header{
   height: 50vh;
 }
