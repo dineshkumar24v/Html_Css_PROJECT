@@ -1,11 +1,13 @@
 
 
 
-html{
+html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-*{
+*,
+*::before,
+*::after{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -31,6 +33,7 @@ header{
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
+  max-width: 100%;
 }
 header .navbar{
   height: 10vh;
@@ -792,9 +795,9 @@ footer{
 @media screen and (width>1200px) {
   
 }
-@media screen and (width>992px) and (width<1200px) {
+@media screen and (width>992px) and (width<=1200px) {
     /* navbar*************************** */
-html{
+html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -1184,9 +1187,9 @@ header{
   }
 
 }
-@media screen and (width>768px) and (width<992px) {
+@media screen and (width>768px) and (width<=992px) {
   /* navbar*************************** */
-  html{
+  html, body{
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -1580,9 +1583,9 @@ header{
   }
 }
 
-@media screen and (width>576px) and (width<768px) {
+@media screen and (width>576px) and (width<=768px) {
   /* navbar*************************** */
-  html{
+  html, body{
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -1976,9 +1979,9 @@ header{
   }
 }
 /* media Q ****** */
-@media screen and (width>388px) and (width<576px) {
+@media screen and (width>388px) and (width<=576px) {
 /* navbar*************************** */
-html{
+html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -2372,9 +2375,9 @@ header{
   }
 }
 /* media Q ****** */
-@media screen and (width<388px) {
+@media screen and (width<=388px) {
 /* navbar*************************** */
-html{
+html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -2382,7 +2385,8 @@ header{
   height: 50vh;
 }
   header .navbar{
-    height: 4vh;
+    height: 3vh;
+    max-width: 100%;
   }
   header .navbar img{
     height: .8rem;
@@ -2501,7 +2505,7 @@ header{
   }
   /* <!-- menu Section-------------------------> */
   .menu_section{
-    height: 70vh;
+    height: 60vh;
   }
   .menu_section h1{
     margin-top: 1.1rem;
@@ -2552,7 +2556,7 @@ header{
   }
   .chef1, .chef2, .chef3{
     border: 1px solid black;
-    height: 32vh;
+    height: 25vh;
     width: 25.2vw;
     margin: .5rem;
     border-radius: .2rem;
@@ -2653,7 +2657,7 @@ header{
     width: 90%;
   }
   .pricing_card{
-    height: 42vh;
+    height: 40vh;
     width: 10rem;
     padding: .2rem;
     margin: .2rem;
