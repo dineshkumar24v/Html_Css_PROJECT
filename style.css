@@ -5,6 +5,7 @@ html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 *,
 *::before,
@@ -202,6 +203,7 @@ transition: transform 0.5s ease-in-out;
 /* todays special section *********/
 .todays_special{
   background-image: url(images/special_menu_bg.jpg);
+  background: linear-gradient(to right, rgba(24, 24, 24, 0.76), rgba(81, 79, 81, 0.922)), url('images/special_menu_bg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -381,7 +383,7 @@ article .container{
 iframe{
   margin: 4rem;
   border: none;
-  width: 78%;
+  width: 77%;
   height: 15rem;
 }
 
@@ -389,7 +391,7 @@ iframe{
 .our_team{
   text-align: center;
   color: var(--white-color);
-  background: linear-gradient(to right, rgba(208, 212, 209, 0.333), rgba(171, 114, 162, 0.4)), url('images/team_bg.jpg');
+  background: linear-gradient(to right, rgba(24, 24, 24, 0.76), rgba(81, 79, 81, 0.922)), url('images/team_bg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -480,15 +482,8 @@ iframe{
   width: 100%;
   flex-wrap: wrap;
   gap: 0.5rem;
-  /* padding-bottom: 1rem; */
   justify-content: center;
 }
-/* .img1, .img11{
-  height: 50vh;
-  width: 80vw;
-  padding: 2rem;
-  transition: transform 0.5s ease-in-out;
-} */
 .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
   height: 50vh;
   width: 30vw;
@@ -648,7 +643,7 @@ iframe{
 /* <!-- reservation section ------------------------>*/
 .reservation_section{
   text-align: center;
-  background: linear-gradient(to right, rgba(116, 89, 89, 0.3), rgba(123, 198, 219, 0.4)), url('images/tableBook.jpg');
+  background: linear-gradient(to right, rgba(24, 24, 24, 0.498), rgba(81, 79, 81, 0.655)), url('images/tableBook.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -667,11 +662,13 @@ iframe{
   font-family: monospace;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--white-color);
 }
 .reservation_section p{
   font-family: monospace;
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  color: var(--white-color);
 }
 .reservation_section input, select{
   padding: 1rem;
@@ -688,15 +685,13 @@ iframe{
 /* <!-- contact us section ------------------------> */
 .newsletter{
   height: 65vh;
-  background: linear-gradient(to right, rgba(208, 212, 209, 0.333), rgba(171, 114, 162, 0.4)), url('images/newsletter-bg.jpg');
-  /* background-image: url(images/newsletter-bg.jpg); */
+  background: linear-gradient(to right, rgba(47, 48, 48, 0.527), rgba(20, 20, 20, 0.571)), url('images/newsletter-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   color: var(--white-color);
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/blog_bg.jpg); */
   text-align: center;
 }
 .newsletter h1{ 
@@ -753,7 +748,7 @@ iframe{
 /* <!-- footer---------------------> */
 .footer_section{
   height: 80vh;
-  background-image: url(images/footer_background.jpg);
+  background: linear-gradient(to right, rgba(17, 17, 17, 0.432), rgba(31, 31, 31, 0.443)), url('images/footer_background.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
