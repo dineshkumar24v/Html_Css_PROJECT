@@ -4,14 +4,14 @@
 html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 *,
 *::before,
 *::after{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 /* colors*************************/
 :root{
@@ -76,6 +76,7 @@ header .navbar li:hover{
 header .hero_section{
   text-align: center;
   width: 100%;
+  max-width: 100%;
 }
 .hero_section img{
   height: 2rem;
@@ -612,7 +613,7 @@ iframe{
   justify-content: center;
 }
 .pricing_card{
-  height: 90vh;
+  height: 99vh;
   width: 20rem;
   padding: 1rem;
   border: 1px solid var(--orange-color);
@@ -621,8 +622,12 @@ iframe{
 }
 .pricing_card:hover{
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  height: 92vh;
-  width: 21rem;
+}
+.price-tag{
+  background-color: var(--orange-color);
+  padding: .2rem;
+  border-radius: 5px;
+  color: var(--white-color);
 }
 #Pbtn{
   font-size: 1.1rem;
