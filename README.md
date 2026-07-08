@@ -4,7 +4,9 @@ A polished restaurant website built with HTML, CSS, and JavaScript. The project 
 
 ## Live Preview
 
-Open `index.html` in any modern browser to view the project locally.
+View the deployed project here:
+
+[Live Demo](https://dineshkumar24v.github.io/Html_Css_PROJECT/)
 
 ## Screenshots
 
