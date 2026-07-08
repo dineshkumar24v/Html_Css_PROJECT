@@ -22,14 +22,12 @@ Use section-wise screenshots as the main showcase because they are easier to vie
 
 After adding screenshots, uncomment or update these image links:
 
-```markdown
 ![Home Section](screenshots/home.png)
 ![About and Special Section](screenshots/about-special.png)
 ![Menu Section](screenshots/menu.png)
 ![Gallery Section](screenshots/gallery.png)
 ![Reservation and Contact Section](screenshots/reservation-contact.png)
 ![Full Page Screenshot](screenshots/full-page.png)
-```
 
 ## Features
 
