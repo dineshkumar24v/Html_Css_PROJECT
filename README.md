@@ -1,45 +1,52 @@
 # Restaurant Website
 
-A responsive restaurant website built with HTML, CSS, and JavaScript. The project includes a landing page with restaurant sections such as About, Today's Special, Menu, Team, Gallery, Blog, Pricing, Reservation, Newsletter, and Contact.
+A polished restaurant website built with HTML, CSS, and JavaScript. The project presents a modern dining experience with a rich landing page, menu categories, gallery, reservation section, blog previews, pricing cards, and contact/footer content.
 
-## Preview
+## Live Preview
 
-Add your project screenshots inside the `screenshots/` folder.
+Open `index.html` in any modern browser to view the project locally.
 
-Recommended screenshot setup:
+## Screenshots
 
-```text
-screenshots/
-  home.png
-  about-special.png
-  menu.png
-  gallery.png
-  reservation-contact.png
-  full-page.png
-```
-
-Use section-wise screenshots as the main showcase because they are easier to view on GitHub. If you also have a full webpage FireShot capture, add it as `screenshots/full-page.png` and keep it after the section screenshots.
-
-After adding screenshots, uncomment or update these image links:
+### Home
 
 ![Home Section](screenshots/home.png)
+
+### About and Today's Special
+
 ![About and Special Section](screenshots/about-special.png)
+
+### Menu
+
 ![Menu Section](screenshots/menu.png)
+
+### Gallery
+
 ![Gallery Section](screenshots/gallery.png)
+
+### Reservation and Contact
+
 ![Reservation and Contact Section](screenshots/reservation-contact.png)
+
+### Full Page View
+
 ![Full Page Screenshot](screenshots/full-page.png)
 
 ## Features
 
-- Restaurant landing page with multiple content sections
-- Navigation links for page sections
-- Separate menu pages for starters, main dishes, desserts, and drinks
-- Image gallery section
-- Blog and pricing sections
-- Reservation form layout
-- Newsletter and footer/contact area
-- Custom styling with CSS
-- Basic JavaScript interaction
+- Responsive restaurant landing page
+- Smooth section-based navigation
+- Dedicated menu pages for starters, main dishes, desserts, and drinks
+- Featured specials and food gallery
+- Team, blog, pricing, and reservation sections
+- Newsletter and contact/footer layout
+- Custom CSS styling with JavaScript enhancements
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
 
 ## Project Structure
 
@@ -56,46 +63,28 @@ Html_Css_PROJECT/
   screenshots/
 ```
 
-## How to Run
+## Getting Started
 
-This is a static website, so no installation is required.
+No dependencies or installation are required.
 
-1. Download or clone the project.
-2. Open `index.html` in your browser.
+1. Clone or download the repository.
+2. Open `index.html` in a browser.
 
-You can also run it from PowerShell:
+PowerShell:
 
 ```powershell
-cd "C:\Users\sjaro\OneDrive\Documents\GitHub\Html_Css_PROJECT"
+cd "C:\Html_Css_PROJECT"
 start index.html
 ```
 
 ## Pages
 
-- `index.html` - Main restaurant website
+- `index.html` - Main restaurant landing page
 - `starters.html` - Starters menu
 - `maindish.html` - Main dishes menu
 - `deserts.html` - Desserts menu
 - `drinks.html` - Drinks menu
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-
-## Screenshot Tips
-
-For the best GitHub presentation, add section-wise screenshots first:
-
-1. Hero/Home section
-2. About + Today's Special section
-3. Menu section
-4. Gallery section
-5. Reservation + Contact section
-
-Then add your full-page FireShot screenshot as `full-page.png`. A full-page screenshot is useful, but it can be very tall and hard to read in a README, so it works best as the final preview image.
-
 ## Author
 
-Created as an HTML, CSS, and JavaScript restaurant website project.
+Created as a frontend restaurant website project using HTML, CSS, and JavaScript.
